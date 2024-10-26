@@ -1,0 +1,302 @@
+To make your CSS code into a responsive web page, you need to introduce media queries. Media queries allow you to apply different CSS styles depending on various factors such as screen width, device orientation, or resolution. Here's how you can modify your CSS code to make it responsive:
+
+```css
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all;
+}
+
+body {
+    background-color: #f4ebeba6;
+}
+
+/*********************header********************/
+.head {
+    height: 60px;
+    width: 100%;
+    background-color: #0f1111;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+.nav-logo {
+    height: 95%;
+    width: 10%;
+    position: relative;
+}
+
+.logo {
+    height: 80%;
+    width: 100%;
+    background-image: url('https://th.bing.com/th/id/R.259424acb1bbf2ce00df2a0f3ee3a66d?rik=vSqltwMTDsTbxg&riu=http%3a%2f%2fwww.bizmonthly.com%2fwp-content%2fuploads%2f2020%2f04%2famazon-logo-black.png&ehk=Ffc4jD16P4sohdWSrk%2bC9y5lDgYcvATKVJfYzCM2YPc%3d&risl=&pid=ImgRaw&r=0');
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.border {
+    border: 3px solid transparent;
+    position: relative;
+}
+
+.s1,
+.p2,
+.a3,
+.n4 {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    transition: 0.5s;
+}
+
+.border:hover .s1 {
+    width: 100%;
+}
+
+.border:hover .p2 {
+    height: 100%;
+}
+
+.border:hover .a3 {
+    width: 100%;
+}
+
+.border:hover .n4 {
+    height: 100%;
+}
+
+.location,
+.search,
+.lang,
+.hello,
+.return,
+.cart {
+    height: 80%;
+}
+
+.location,
+.lang,
+.hello,
+.return {
+    width: 9%;
+}
+
+.search,
+.cart {
+    width: 30%;
+}
+
+.head > * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.head > .lang select,
+.head > .hello select {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.head > .lang select option:hover {
+    background-color: #ffffff;
+}
+
+.head > .search input[type="text"] {
+    border: none;
+    width: calc(100% - 30px);
+    font-size: 1rem;
+}
+
+.head > .search button {
+    border: none;
+    background-color: orange;
+    color: black;
+}
+
+.head > .search button:hover {
+    border: 1px solid orange;
+}
+
+/**********************header bottom*************************/
+.bot {
+    height: 40px;
+    width: 100%;
+    background-color: #151121;
+    opacity: 0.95;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    color: #ffffff;
+}
+
+.bot > div {
+    width: 10%;
+    text-align: center;
+}
+
+/**********************content*************************/
+.main {
+    width: 100%;
+    background-size: cover;
+    background-color: #f4ebeba6;
+    position: relative;
+    z-index: -2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img {
+    height: 400px;
+    width: 100%;
+    background-size: cover;
+    position: relative;
+    animation: rotate 20s infinite linear;
+}
+
+.tag {
+    width: 97%;
+    height: 35px;
+    background-color: rgb(243, 243, 243);
+    color: black;
+    position: absolute;
+    z-index: 1;
+}
+
+.tag p {
+    margin: 8px;
+}
+
+.topics {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    height: auto;
+    width: 97%;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.game,
+.refresh,
+.fashion,
+.pc,
+.gadget,
+.beauty,
+.top,
+.ded {
+    height: 400px;
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2px 2px 2px rgb(231, 221, 221);
+}
+
+.game h3,
+.refresh h3,
+.fashion h3,
+.pc h3,
+.gadget h3,
+.beauty h3,
+.top h3,
+.ded h3 {
+    margin: 10px 0px 0px 10px;
+}
+
+.game > div,
+.refresh > div,
+.fashion > div,
+.pc > div,
+.gadget > div,
+.beauty > div,
+.top > div,
+.ded > div {
+    height: 90%;
+    width: 90%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/**********************footer*************************/
+.foot {
+    height: 40px;
+    width: 100%;
+    background-color: #151121;
+    opacity: 0.85;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.fot {
+    height: 250px;
+    width: 100%;
+    background-color: #151121;
+    opacity: 0.95;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: #ffffff;
+}
+
+.fot p {
+    margin-top: 40px;
+}
+
+.fog {
+    font-size: small;
+    height: 50px;
+    width: 100%;
+    background-color: #151121;
+    opacity: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    color: #ffffff;
+}
+
+.fog p {
+    margin-top: 10px;
+    word-spacing: 10px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .head {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+    .head > * {
+        margin: 5px;
+    }
+    .head > .search,
+    .head > .cart {
+        width: 100%;
+    }
+    .head > .lang,
+    .head > .hello,
+    .head > .return {
+        display
